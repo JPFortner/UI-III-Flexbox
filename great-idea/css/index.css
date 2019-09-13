@@ -49,7 +49,8 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+	max-width: 1281px;
 }
 
 html, body {
@@ -57,10 +58,147 @@ html, body {
     font-family: 'Titillium Web', sans-serif;
 }
 
+/* nav, a, p, div, section, img {
+	border: 1px dotted black;
+} */
+
 h1, h2, h3, h4, h5 {
     font-family: 'Bangers', cursive;
     letter-spacing: 1px;
     margin-bottom: 15px;
 }
 
-/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+nav {
+	display: flex;
+	width: 100%;
+	/* justify-content: space-around; */
+	align-items: center;
+	margin: 1em 0em;
+}
+
+nav section {
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+}
+
+nav img {
+	align-self: flex-end;
+	margin-left: 5%;
+	margin-right: 1em;
+}
+
+header {
+	display: flex;
+}
+
+header section {
+	display: flex;
+	width: 50%;
+	text-align: center;
+	justify-content: center;
+}
+
+header section h1 {
+	font-size: 4rem;
+}
+
+header section button, .contentBoxes section button {
+	width: 6rem;
+	height: 2rem;
+	border-radius: 1rem;
+	color: white;
+	background-color: black;
+	font-size: 1rem;
+	font-family: 'Bangers';
+	align-self: center;
+}
+
+.hdrLeft {
+	flex-direction: column;
+}
+
+.divDivider {
+	margin: 2em 0em;
+	border: .5px solid black;
+}
+
+.middle-img {
+	width: 100%;
+	margin: 2em 0em;
+}
+
+.divContentTop, .divContentBottom {
+	display: flex;
+	justify-content: space-between;
+}
+
+.divContentTop section, .divContentBottom section {
+	margin: 0em 1em 0em 1em;
+}
+
+.copyrightCenter {
+	text-align: center;
+	margin: 1em 0em;
+}
+
+.services-header-img {
+	width: 100%;
+}
+
+.contentTop, .contentBottom {
+	margin: 1em;
+	padding: 1em;
+}
+
+.contentBoxes {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.contentBoxes section {
+	border: 1px solid black;
+	border-radius: 1em;
+	width: 45%;
+	height: auto;
+	padding: 1em;
+	margin: 1em 0em;
+	background-color: lightgray
+}
+
+ul {
+	list-style-type: square;
+	list-style-position: inside;
+}
+
+.flexBottom {
+	display: flex;
+	justify-content: space-between;
+}
+
+.services-info-img {
+	margin: 2em;
+}
+
+@media (max-width: 640px){
+}
+	 
+@media (min-width: 641px) and (max-width: 768px){
+}
+	 
+@media (min-width: 769px) and (max-width: 1024px){
+	.hdrRight {
+		display: none;
+	}
+	header {
+		justify-content: center;
+	}
+	header .hdrLeft button {
+		font-size: 2em;
+		width: fit-content;
+		height: fit-content;
+		padding: .5em;
+	}
+
+}
